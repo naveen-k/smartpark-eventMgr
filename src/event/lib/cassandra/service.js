@@ -175,15 +175,15 @@ var Service = function(configuration) {
   };
   // Get List from the Database for a garage
   var listEventsForGarageBydate = function(params) {
-    var pageResult = new Model.PageResult();
+    var pageResult = new Model.GaregResult();
     pageResult.list = [];
 
    var query = {
         garage_id: params.garage_id 
     }
     Table.find(query, function(err, rows){
-      if(err) return self.emit('send-error', err, 'Failed to Get Event List');
-
+      if(err) return self.emit('send-error', err, 'Failed to Get Event List for',query.garage_id);
+      pageResult.garage_id=query.garage_id;
       for(var row of rows) {
         pageResult.list.push(new Model.Event(row));
       }

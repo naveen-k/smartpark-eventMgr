@@ -51,6 +51,16 @@ var Model = function(args) {
       this.list = [];
     }
   }
+  
+  self.GaregResult = class {
+    constructor() {
+      this.pages = 0;
+      this.currentPage = 0;
+      this.count = 0;
+      this.garage_id = '';
+      this.list = [];
+    }
+  }
 
   self.Response = class {
     constructor(args) {
