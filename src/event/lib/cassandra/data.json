@@ -1,0 +1,9 @@
+[
+  {
+    "garage_id" :"WALTHAM-01",
+    "image_url": "http://images.clipartpanda.com/car-clipart-black-and-white-car-images-clip-art-g4f4nawd.png",
+    "description": "WRONG-WAY",
+    "category": "WARN",
+    "spot": "SPOT008"
+  }
+]
